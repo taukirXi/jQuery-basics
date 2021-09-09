@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery basic</title>
+
+    <style>
+        .main {
+            margin: 20px;
+        }
+
+        .body_style {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            color: white;
+            padding: 20px;
+        
+        }
+        .body_style2{
+            color: blue;
+            padding: 20px;
+            margin: 20px;
+            border: 5px solid black;
+        }
+
+        .back{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <button id="btn1">click to add class </button>
+        <button id="btn2">remove class </button>
+        <button id="btn3">remove hard coded class</button>
+        <div id="div1" class="back">
+            this is div 1
+        </div>
+    </div>
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-color.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn1').click(function (e) { 
+                e.preventDefault();
+                $('#div1').addClass('body_style body_style2');
+            });
+
+            $('#btn2').click(function (e) { 
+                e.preventDefault();
+                //remove css class 'removeClass'
+                $('#div1').removeClass('body_style');
+            });
+
+
+            $('#btn3').click(function (e) { 
+                e.preventDefault();
+                $('#div1').removeClass('back');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery ui by taukir ahmmed</title>
+
+    <link rel="stylesheet" href="jqueryui/css/jquery-ui.css">
+    <style>
+        .ui-autocomplete    {
+            max-height: 100px;
+            /* over flow auto means scrollable */
+            overflow-y: auto; 
+
+            /* overflow hidden x means it hideen the x scroll */
+            overflow-x: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="get_data">
+      </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="jqueryui/js/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            var var1 = [
+                'pakistan',
+                'india',
+                'brazil',
+                'canada',
+                'australia',
+
+                'united kingdom',
+                'united states',
+                'china',
+                'russia'
+            ];
+
+            $('#get_data').autocomplete({
+                source: var1
+            });
+
+        });
+    </script>
+</body>
+
+</html>

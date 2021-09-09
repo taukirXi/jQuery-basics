@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery basic</title>
+
+    <style>
+        .main {
+            margin: 10px;
+
+        }
+
+        .body_style {
+            background-color: orange;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>click to stop</button>
+    <div class="main">
+
+        <div id="div1" class="body_style"></div>
+    </div>
+    <div class="main">
+
+        <div id="div2" class="body_style"></div>
+    </div>
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-color.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#div1').click(function () {
+                $(this).animate({
+                    height: '150px',
+                    width: '150px',
+                    marginLeft: '300px',
+                    backgroundColor: 'red',
+
+
+                    // can use every css property without background color
+                    //except using jq color pluginsF
+                }, 3000);
+                $(this).animate({
+                    height: '250px',
+                    width: '250px',
+                    marginLeft: '300px',
+                    backgroundColor: 'green',
+
+
+                    // can use every css property without background color
+                }, 3000); // 3000 means 3s for animation timing
+                // it has to put after animate the div
+            });
+            $('button').click(function (e) {
+                e.preventDefault();
+                $('#div1').stop();
+            });
+            $('#div2').click(function (e) {
+                e.preventDefault();
+                $('#div2').slideUp(5000);
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

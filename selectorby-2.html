@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery basic</title>
+
+    <style>
+        .main {
+            margin: 10px;
+            float: left;
+        }
+
+        .head_style {
+            background-color: orange;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .body_style {
+            background-color: red;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div id="div1" class="head_style">cilck to toggle</div>
+        <div id="div2" class="body_style"></div>
+    </div>
+    <div class="main">
+
+        <div id="div3" class="head_style">cilck to toggle</div>
+        <div id="div4" class="body_style"></div>
+    </div>
+    <div class="main">
+
+        <div id="div5" class="head_style">cilck to toggle</div>
+        <div id="div6" class="body_style"></div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            //   click event
+            $('#div1').click(function () {
+                $('#div2').toggle();
+
+            });
+            $('#div3').click(function () {
+                $('#div4').toggle();
+
+            });
+            $('#div5').click(function () {
+                $('#div2').toggle();
+
+            });
+
+            // jquery can select any element from anywhere
+
+
+        });
+    </script>
+</body>
+
+</html>

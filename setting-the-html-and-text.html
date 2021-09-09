@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery basic</title>
+
+    <style>
+        .main {
+            margin: 10px;
+
+        }
+
+        .body_style {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button id="btn1">get the html</button>
+        <button id="btn2">copy and paste</button>
+        <button id="btn3">copy and paste html</button>
+        <button id="btn4">copy and paste html into text</button>
+
+        <div id="div1">this is <u>some</u> text</div>
+        <div class="body_style" id="div2"></div>
+    </div>
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-color.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btn1').click(function (e) {
+                e.preventDefault();
+                var var2 = $('#div1').html();
+                alert(var2);
+            });  // if click btn1 it get the html of div 1
+
+
+            // if click div1 it show it will get the txt and show in div2
+            $('#div1').click(function () {
+
+                var txt = $(this).text();
+                // alert(txt);
+                $('#div2').text(txt);
+            });
+
+
+            // if clck btn2 it get the text from div1 and paste into div2
+            $('#btn2').click(function (e) {
+                e.preventDefault();
+                var var3 = $('#div1').text();
+                $('#div2').text(var3);
+
+            });
+
+
+
+
+            // if clck btn2 it get the html form div1 and paste into div2
+            $('#btn3').click(function (e) {
+                e.preventDefault();
+                var var4 = $('#div1').html();
+                $('#div2').html(var4);
+            });
+
+            // if click btn4 it get the html and convert into text and 
+            // put into div2
+            $('#btn4').click(function (e) {
+                e.preventDefault();
+                var var5 = $('#div1').html();
+                $('#div2').text(var5);
+            });
+        });
+    </script>
+</body>
+
+</html>

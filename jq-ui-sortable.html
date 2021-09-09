@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery ui by taukir ahmmed</title>
+
+    <link rel="stylesheet" href="jqueryui/css/jquery-ui.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        #div1 {
+            background-color: red;
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+        #div3 {
+            background-color: orange;
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div2 {
+            
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            float: right;
+        }
+
+        .div1 {
+            background-color: silver;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+            height: 40px;
+            margin: 20px;
+
+
+        }
+        .div2 {
+            background-color:  orange;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+            height: 40px;
+            margin: 20px;
+
+
+        }
+
+        #main_div{
+            float: left;
+            border: 1px solid silver;
+            padding: 20px;
+            margin-right: 20px;
+            width: 250px;
+        }
+
+        #main_div2{
+            float: left;
+            border: 1px solid silver;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main_div" class="linking">
+
+        <div class="div1">a</div>
+        <div class="div1">b</div>
+        <div class="div1">c</div>
+        <div class="div1">d</div>
+        
+    </div>
+    <div id="main_div2" class="linking">
+
+        <div class="div2">1</div>
+        <div class="div2">2</div>
+        <div class="div2">3</div>
+        <div class="div2">4</div>
+        
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="jqueryui/js/jquery-ui.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#main_div, #main_div2').sortable({
+                connectWith: '.linking',
+            });
+            
+           
+        });
+    </script>
+</body>
+
+</html>

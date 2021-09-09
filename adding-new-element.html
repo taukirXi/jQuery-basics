@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery basic</title>
+
+    <style>
+        .main {
+            margin: 20px;
+           
+
+        }
+
+        .body_style {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button id="btn1">add more content(after: inside)</button>
+        <button id="btn3">add more content (before: inside)</button>
+        <button id="btn2">add more content in list(after:inside)</button>
+        <button id="btn4">add more content in list (before:inside)</button>
+        
+        <button id="btn5">add more content (after)</button>
+        <button id="btn6">add more content (before)</button>
+
+        <div id="para1">
+            <p>this is first paragraph</p>
+            <p>this is second paragraph</p>
+
+        </div>
+        <ol id="ol1">
+            <li>first list item</li>
+            <li>second list item</li>
+            <li>third list item</li>
+        </ol>
+    </div>
+
+
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-color.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#btn1').click(function (e) { 
+                e.preventDefault();
+                $('#para1').append('<ol>hello world</ol>');
+            });
+
+
+            $('#btn2').click(function (e) { 
+                e.preventDefault();
+                $('#ol1').append('<li>new list in item</li>');
+            });
+            
+            $('#btn3').click(function (e) { 
+                e.preventDefault();
+                $('#para1').prepend('<p>the new content in paragraph</p>');
+            });
+
+            $('#btn4').click(function (e) { 
+                e.preventDefault();
+                $('#ol1').prepend('<li>new content in the list</li>');
+            });
+
+            $('#btn5').click(function (e) { 
+                e.preventDefault();
+                $('#para1').after('<p>new content</p>');
+            });
+
+            $('#btn6').click(function (e) { 
+                e.preventDefault();
+                $('#para1').before('<p>new content</p>');
+            });
+        });
+    </script>
+</body>
+
+</html>

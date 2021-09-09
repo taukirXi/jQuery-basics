@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn jquery ui by taukir ahmmed</title>
+
+    <link rel="stylesheet" href="jqueryui/css/jquery-ui.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        #div1 {
+            background-color: red;
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div3 {
+            background-color: orange;
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+
+        #div2 {
+
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="tab">
+        <ul>
+            <li><a href="#tabs-1"> home</a></li>
+            <li><a href="#tabs-2"> software</a></li>
+            <li><a href="#tabs-3"> technology</a></li>
+        </ul>
+
+        <div id="tabs-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, voluptatum placeat. Neque praesentium
+                at, quisquam eos iste totam itaque velit culpa necessitatibus odio libero facere quo et officia eveniet
+                vero modi perspiciatis. Possimus, similique doloremque quidem architecto, numquam voluptatibus
+                blanditiis illo totam deserunt sapiente eaque odio quia id consequuntur rem!</p>
+        </div>
+        <div id='tabs-2'>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias magni harum nobis vitae. Explicabo
+                perspiciatis ullam consequuntur sed, ex odit consequatur quasi sit excepturi officiis voluptatibus
+                temporibus voluptatum eligendi veniam, porro minima rem repudiandae ducimus maxime. Vero magnam minus
+                eum dolore ex illum alias molestiae assumenda aspernatur, corrupti natus praesentium.</p>
+        </div>
+        <div id="tabs-3">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, placeat eligendi assumenda expedita
+                perspiciatis maiores praesentium similique debitis amet adipisci earum voluptatem, minima qui
+                accusantium voluptates! Autem maxime recusandae, corporis sit quod eius, praesentium esse at sapiente
+                aliquid eaque unde atque repellat iure! Voluptas placeat reprehenderit earum repellat, libero similique.
+            </p>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="jqueryui/js/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+        
+            $('#tab').tabs({
+                collapsible: true,
+                event: "mouseover"
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
