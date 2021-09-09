@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery css generator</title>
+
+
+    <link rel="stylesheet" href="jqueryui/css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* this has to be here */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="right">
+            <label>Select any color</label>
+            <select class="elem">
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="orange">orange</option>
+                <option value="black">black</option>
+                <option value="yellow">yellow</option>
+                <option value="purple">purple</option>
+            </select>
+        </div>
+        <div class="left">
+
+
+            <div class="result"></div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-color.js"></script>
+    <script src="jqueryui/js/jquery-ui.js"></script>
+
+    <script>
+
+
+        var css_background = 'green';
+        function css_func() {
+
+            css_tag = ".result{background:" + css_background + ";height: 40px; width: 200px; border: 2px black solid}";
+
+
+            $('style').replaceWith('<style>' + css_tag + '</style>');
+        }
+        $(document).ready(function () {
+            css_func();
+
+            $('select').change(function (e) {
+                e.preventDefault();
+                css_background = $(this).val();
+                css_func();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
